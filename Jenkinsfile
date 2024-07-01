@@ -42,7 +42,7 @@ pipeline{
             //jenkins不配置任何环境的情况下， 仅适用docker 兼容所有场景
             agent {
                 docker {
-                    image 'maven:3-alpine'
+                    image 'docker.gptd.cc/docker.io/maven:3-alpine'
                     args '-v /var/jenkins_home/appconfig/maven/.m2:/root/.m2'
 //                     args  '-v /a/settings.xml:/app/settings.xml'
                     //docker run -v /a/settings.xml:/app/settings.xml
